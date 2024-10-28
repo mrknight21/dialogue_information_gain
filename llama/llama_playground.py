@@ -2,8 +2,11 @@
 from transformers import AutoTokenizer, pipeline
 import torch
 from huggingface_hub import login
-login("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")
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+login(os.getenv('HUGGINF_FACE'))
 
 
 def play():
@@ -16,11 +19,8 @@ def play():
         device_map="auto"
     )
 
-    pipe("The key to life is")
-
-
-
-
+    test_output = pipe("The key to life is")
+    print(test_output)
 
 
 
