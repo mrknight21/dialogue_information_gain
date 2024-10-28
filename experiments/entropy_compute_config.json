@@ -1,0 +1,22 @@
+{
+    "Dataset": {
+	    "corpus": "epsn",
+        "path": "../data/epsn/epsn_corrected.csv",
+        "language": "ES",
+        "column_option": {
+            "text_col": "text",
+            "file_col": "file",
+            "index_col": "index",
+            "speaker_col": "speaker",
+            "group_columns": ["file"]
+        }
+    },
+    "DataLoader": {
+        "sep_token": "eos",
+        "max_length": 4096
+    },
+    "Model":{
+        "model_name": "meta-llama/Llama-3.2-3B"
+    },
+    "Computation": []
+}
